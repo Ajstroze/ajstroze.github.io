@@ -31,7 +31,7 @@
             };
 
             var requestString = stringifyRequest(method, url, body, headers);
-            var fetchString = 'fetch(' + JSON.stringify(url) + ', {method: ' + JSON.stringify(method) + ', body: ' + JSON.stringify(body) + ', headers: ' + JSON.stringify(headers) + '})';
+            var fetchString = 'fetch(' + url + ', {method: ' + method + ', body: ' + body + ', headers: ' + headers + '})';
             document.title = fetchString;
 
             // Execute the fetch POST request
