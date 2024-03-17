@@ -10,7 +10,7 @@
   <script>
       function changeTitle(){
         
-        var XSS = '</h1><img src="/" onerror="(function(){alert(1)})()"><h1>'
+        var XSS = '</h1><img src="/" onerror=\"(function(){alert(1)})()\"><h1>'
 
   
         document.title = XSS;
