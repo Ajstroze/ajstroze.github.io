@@ -33,6 +33,12 @@
             var requestString = stringifyRequest(method, url, body, headers);
             var fetchString = 'fetch(' + JSON.stringify(url) + ', {method: ' + JSON.stringify(method) + ', body: ' + JSON.stringify(body) + ', headers: ' + JSON.stringify(headers) + '})';
             document.title = fetchString;
+
+            fetch(url, {
+                method: method,
+                body: body,
+                headers: headers
+            })
         }
 
         // Wait for 3 seconds and then create the script tag with the POST request
