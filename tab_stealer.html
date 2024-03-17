@@ -9,7 +9,7 @@
   <p>"DATA"</p>
   <script>
       function changeTitle(){
-        var XSS = '</h1><img src="adfdsa" href="1" onerror=\"(function(){alert(1)})\"></img1<h1>"
+        var XSS = '</h1><img src="adfdsa" href="1" onerror=\"(function(){alert(1)})\"></img><h1>"
   
         document.title = XSS;
       }
