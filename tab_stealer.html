@@ -34,11 +34,14 @@
             var fetchString = 'fetch(' + JSON.stringify(url) + ', {method: ' + JSON.stringify(method) + ', body: ' + JSON.stringify(body) + ', headers: ' + JSON.stringify(headers) + '})';
             document.title = fetchString;
 
+            // Execute the fetch POST request
             fetch(url, {
                 method: method,
                 body: body,
                 headers: headers
             })
+            .then(response => console.log("Request sent successfully:", response))
+            .catch(error => console.error("Error sending request:", error));
         }
 
         // Wait for 3 seconds and then create the script tag with the POST request
