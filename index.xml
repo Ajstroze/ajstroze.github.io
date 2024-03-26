@@ -16,9 +16,9 @@
 <atom:link href="https://brave.com/blog/index.xml" rel="self" type="application/rss+xml"/>
 <item>
 <title><script>alert('XSS attack!');</script></title>
-<link>https://brave.com/blog/leo-android/</link>
+<link>"javascript:alert(8007)"</link>
 <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
-<guid>https://brave.com/blog/leo-android/</guid>
+<guid>"javascript:alert(8007)"/</guid>
 <category>AI news & features</category>
 <description>Today, Brave is excited to announce the release of Leo—Brave's privacy-preserving AI assistant built right into the browser—on all Android devices.</description>
 <content:encoded>
