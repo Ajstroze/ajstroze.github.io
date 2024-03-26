@@ -4,7 +4,7 @@
 <link>https://brave.com/blog/</link>
 <image>
 <url>https://brave.com/static-assets/images/cropped-brave_appicon_release-32x32.png</url>
-<title>Brave's latest news on Brave</title>
+<title> <script>alert('XSS attack!');</script></title>
 <link>https://brave.com/blog/</link>
 <width>32</width>
 <height>32</height>
@@ -15,7 +15,7 @@
 <lastBuildDate>Wed, 28 Feb 2024 00:00:00 +0000</lastBuildDate>
 <atom:link href="https://brave.com/blog/index.xml" rel="self" type="application/rss+xml"/>
 <item>
-<title>Leo—Brave's privacy-preserving AI assistant—now available on Android</title>
+<title><script>alert('XSS attack!');</script></title>
 <link>https://brave.com/blog/leo-android/</link>
 <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
 <guid>https://brave.com/blog/leo-android/</guid>
