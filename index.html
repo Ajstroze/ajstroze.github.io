@@ -6,36 +6,24 @@
     <title>Ajstroze</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <div class="page-background">
+        <!-- Hamburger Menu Button -->
+        <button id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-        <!-- Top Navigation Bar -->
-        <header>
-            <div id="top-bar">
-
-                <!-- Hamburger Button -->
-                <button id="hamburger" aria-label="Open navigation">
-                    ☰
-                </button>
-
-                <!-- Site Title -->
-                <div id="site-title">
-                    Ajstroze
-                </div>
-
-            </div>
-
-            <!-- Slide-out / Dropdown Menu -->
-            <nav id="nav-menu" hidden>
-                <ul>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                </ul>
-            </nav>
-        </header>
+        <!-- Navigation Menu -->
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
         <!-- Main Landing Content -->
         <main>
@@ -47,20 +35,21 @@
                 </p>
             </section>
         </main>
-
     </div>
 
-    <!-- Basic Menu Toggle Logic -->
+    <!-- Menu Toggle Script -->
     <script>
-        const hamburger = document.getElementById("hamburger");
-        const navMenu = document.getElementById("nav-menu");
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
 
-        hamburger.addEventListener("click", () => {
-            navMenu.hidden = !navMenu.hidden;
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            menu.classList.toggle('open');
+            
+            // Update aria-expanded for accessibility
+            const isExpanded = this.classList.contains('active');
+            this.setAttribute('aria-expanded', isExpanded);
         });
     </script>
-
 </body>
-</html>
-
 </html>
