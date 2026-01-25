@@ -6,44 +6,49 @@
     <title>Ajstroze</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Top Navigation Bar -->
-    <header>
-        <div id="top-bar">
+    <div class="page-background">
 
-            <!-- Hamburger Button -->
-            <button id="hamburger" aria-label="Open navigation">
-                ☰
-            </button>
+        <!-- Top Navigation Bar -->
+        <header>
+            <div id="top-bar">
 
-            <!-- Site Title -->
-            <div id="site-title">
-                Ajstroze
+                <!-- Hamburger Button -->
+                <button id="hamburger" aria-label="Open navigation">
+                    ☰
+                </button>
+
+                <!-- Site Title -->
+                <div id="site-title">
+                    Ajstroze
+                </div>
+
             </div>
 
-        </div>
+            <!-- Slide-out / Dropdown Menu -->
+            <nav id="nav-menu" hidden>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <!-- Slide-out / Dropdown Menu -->
-        <nav id="nav-menu" hidden>
-            <ul>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!-- Main Landing Content -->
+        <main>
+            <section id="landing">
+                <h1>Welcome</h1>
+                <p>
+                    This is my personal site. I use it to share writing, projects,
+                    and professional background.
+                </p>
+            </section>
+        </main>
 
-    <!-- Main Landing Content -->
-    <main>
-        <section id="landing">
-            <h1>Welcome</h1>
-            <p>
-                This is my personal site. I use it to share writing, projects,
-                and professional background.
-            </p>
-        </section>
-    </main>
+    </div>
 
     <!-- Basic Menu Toggle Logic -->
     <script>
@@ -56,4 +61,6 @@
     </script>
 
 </body>
+</html>
+
 </html>
