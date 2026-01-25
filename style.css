@@ -30,17 +30,23 @@
     position: relative;
     z-index: 1;
 }
+
 #top-bar {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
+    position: relative;
+    width: 100%;
     padding: 1rem;
 }
 
 #hamburger {
-    justify-self: start;
+    position: relative;
+    z-index: 2;
 }
 
 #site-title {
-    justify-self: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    white-space: nowrap;
 }
