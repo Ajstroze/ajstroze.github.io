@@ -1,10 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My GitHub Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name | Personal Website</title>
+    <meta name="description" content="Andy's personal website. Projects, blog, resume, and background." />
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1f2937;
+            --accent-color: #2563eb;
+            --muted-color: #6b7280;
+            --max-width: 960px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        nav {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin-left: 1.25rem;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 4rem 1rem;
+        }
+
+        .hero {
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--muted-color);
+            max-width: 700px;
+        }
+
+        .cta {
+            margin-top: 2rem;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 0.75rem 1.25rem;
+            margin-right: 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .cta-primary {
+            background-color: var(--accent-color);
+            color: #ffffff;
+        }
+
+        .cta-secondary {
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        section {
+            margin-bottom: 3.5rem;
+        }
+
+        section h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        section p {
+            color: var(--muted-color);
+            max-width: 800px;
+        }
+
+        footer {
+            border-top: 1px solid #e5e7eb;
+            padding: 2rem 1rem;
+            text-align: center;
+            color: var(--muted-color);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav div {
+                margin-top: 0.5rem;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1>Welcome to My Website!</h1>
-<p>This site is hosted using GitHub Pages.</p>
-</body>
-</html>
+
+<header>
+    <nav>
+        <div class="brand">Your Name</div>
+        <div>
+            <a href="about.html">About
