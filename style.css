@@ -1,7 +1,7 @@
 .page-background {
     min-height: 100vh;
     position: relative;
-    background-color: white;
+    background-color: #0f172a;
     overflow: hidden;
 }
 
@@ -11,18 +11,20 @@
     inset: 0;
     z-index: 0;
 
+    background-color: #0f172a;
     background-image:
-        linear-gradient(to right, #f0f0f0 1px, transparent 1px),
-        linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
-        radial-gradient(circle 600px at 0% 200px, #d5c5ff, transparent),
-        radial-gradient(circle 600px at 100% 200px, #d5c5ff, transparent);
+        linear-gradient(
+            to right,
+            rgba(148, 163, 184, 0.2) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(148, 163, 184, 0.2) 1px,
+            transparent 1px
+        );
 
-    background-size:
-        20px 20px,
-        20px 20px,
-        100% 100%,
-        100% 100%;
-
+    background-size: 40px 40px;
     pointer-events: none;
 }
 
@@ -30,6 +32,7 @@
     position: relative;
     z-index: 1;
 }
+
 
 #top-bar {
     position: relative;
