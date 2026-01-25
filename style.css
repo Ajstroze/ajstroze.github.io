@@ -30,3 +30,17 @@
     position: relative;
     z-index: 1;
 }
+#top-bar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 1rem;
+}
+
+#hamburger {
+    justify-self: start;
+}
+
+#site-title {
+    justify-self: center;
+}
