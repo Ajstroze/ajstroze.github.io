@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ajstroze</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page-background">
+        <h1 class="title">Ajstroze</h1>
+
         <!-- Hamburger Menu Button -->
         <button id="hamburger" aria-label="Toggle menu" aria-expanded="false">
             <span></span>
@@ -19,21 +21,12 @@
         <nav id="menu" class="menu">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">About Me</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
 
-        <!-- Main Landing Content -->
-        <main>
-            <section id="landing">
-                <h1>Welcome</h1>
-                <p>
-                    This is my personal site.
-                </p>
-            </section>
-        </main>
     </div>
 
     <!-- Menu Toggle Script -->
@@ -48,6 +41,28 @@
             // Update aria-expanded for accessibility
             const isExpanded = this.classList.contains('active');
             this.setAttribute('aria-expanded', isExpanded);
+        });
+    </script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+        const overlay = document.getElementById('overlay');
+
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            menu.classList.toggle('open');
+            overlay.classList.toggle('active');
+            
+            const isExpanded = this.classList.contains('active');
+            this.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Close menu when clicking overlay
+        overlay.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            menu.classList.remove('open');
+            overlay.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
         });
     </script>
 </body>
