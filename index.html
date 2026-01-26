@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ajstroze</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page-background">
-        <h1 class="title">Ajstroze</h1>
-
         <!-- Hamburger Menu Button -->
         <button id="hamburger" aria-label="Toggle menu" aria-expanded="false">
             <span></span>
@@ -20,14 +19,32 @@
         <!-- Navigation Menu -->
         <nav id="menu" class="menu">
             <ul>
-                <li><a href="#index.html">Home</a></li>
-                <li><a href="#about.html">About Me</a></li>
-                <li><a href="#blog.html">Blog</a></li>
-                <li><a href="#resume.html">Resume</a></li>
-                <li><a href="#contact.html">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
+        <!-- Centered Title at Top -->
+        <h1 class="title">Ajstroze</h1>
+
+        <!-- Landing Content with Profile -->
+        <div class="landing-container">
+            <div class="landing-content">
+                <h2>Security Engineer</h2>
+                <p>
+                    Hi, My name is Andrew Strozewski, a Security Engineer based in Raleigh, NC.
+                </p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/andrew-strozewski" aria-label="LinkedIn">in</a>
+                    <a href="mailto:ajstroze@email.com" aria-label="Email">@</a>
+                </div>
+            </div>
+            <div class="profile-image">
+                <img src="your-photo.jpg" alt="Your Name">
+            </div>
+        </div>
     </div>
 
     <!-- Menu Toggle Script -->
@@ -39,31 +56,8 @@
             this.classList.toggle('active');
             menu.classList.toggle('open');
             
-            // Update aria-expanded for accessibility
             const isExpanded = this.classList.contains('active');
             this.setAttribute('aria-expanded', isExpanded);
-        });
-    </script>
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const menu = document.getElementById('menu');
-        const overlay = document.getElementById('overlay');
-
-        hamburger.addEventListener('click', function() {
-            this.classList.toggle('active');
-            menu.classList.toggle('open');
-            overlay.classList.toggle('active');
-            
-            const isExpanded = this.classList.contains('active');
-            this.setAttribute('aria-expanded', isExpanded);
-        });
-
-        // Close menu when clicking overlay
-        overlay.addEventListener('click', function() {
-            hamburger.classList.remove('active');
-            menu.classList.remove('open');
-            overlay.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', 'false');
         });
     </script>
 </body>
