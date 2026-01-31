@@ -1,68 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<title>Blog</title>
-	<link rel="stylesheet" href="styles.css" />
-	<style>
-		/* Reuse same minimal styles as contact/about */
-		.site-header{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem;background:#111;color:#fff}
-		.logo{color:#fff;text-decoration:none;font-weight:700}
-		.menu-btn{background:transparent;border:0;padding:0.5rem;display:flex;align-items:center;cursor:pointer}
-		.hamburger{width:22px;height:2px;background:#fff;position:relative;display:inline-block}
-		.hamburger::before,.hamburger::after{content:"";position:absolute;left:0;width:22px;height:2px;background:#fff;transition:transform .25s,top .25s}
-		.hamburger::before{top:-7px}
-		.hamburger::after{top:7px}
-		.menu-btn[aria-expanded="true"] .hamburger{background:transparent}
-		.menu-btn[aria-expanded="true"] .hamburger::before{transform:rotate(45deg);top:0}
-		.menu-btn[aria-expanded="true"] .hamburger::after{transform:rotate(-45deg);top:0}
-		.site-nav{display:flex}
-		.site-nav ul{display:flex;gap:1rem;margin:0;padding:0;list-style:none}
-		.site-nav a{color:#fff;text-decoration:none;padding:0.5rem}
-		@media (max-width:768px){
-			.site-nav{position:absolute;top:100%;left:0;right:0;background:#111;flex-direction:column;display:none}
-			.site-nav.open{display:flex}
-			.site-nav ul{flex-direction:column;padding:0.5rem}
-		}
-	</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ajstroze</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header class="site-header">
-		<a class="logo" href="index.html">AJ Stroze</a>
-		<button id="menu-toggle" class="menu-btn" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="hamburger" aria-hidden="true"></span>
-		</button>
-		<nav id="site-nav" class="site-nav" aria-label="Primary">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+    <div class="page-background">
+        <!-- Hamburger Menu Button -->
+        <button id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-	<main>
-		<h1>Blog</h1>
-		<p>...existing blog content...</p>
-	</main>
+        <!-- Navigation Menu -->
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
-	<script>
-		(function(){
-			const btn = document.getElementById('menu-toggle');
-			const nav = document.getElementById('site-nav');
-			if(!btn || !nav) return;
-			btn.addEventListener('click', () => {
-				const expanded = btn.getAttribute('aria-expanded') === 'true';
-				btn.setAttribute('aria-expanded', String(!expanded));
-				nav.classList.toggle('open');
-			});
-			nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-				nav.classList.remove('open');
-				btn.setAttribute('aria-expanded', 'false');
-			}));
-		})();
-	</script>
+        <!-- Centered Title at Top -->
+        <h1 class="title">Ajstroze</h1>
+
+        <!-- Landing Content with Profile -->
+        <div class="landing-container">
+            <div class="landing-content">
+                <h2>Security Engineer</h2>
+                <p>
+                    Hi, My name is Andrew Strozewski, a Security Engineer based in Raleigh, NC.
+                </p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/andrew-strozewski" aria-label="LinkedIn">in</a>
+                    <a href="mailto:ajstroze@email.com" aria-label="Email">@</a>
+                </div>
+            </div>
+            <div class="profile-image">
+                <img src="pfp.jpg" alt="Your Name">
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            menu.classList.toggle('open');
+            
+            const isExpanded = this.classList.contains('active');
+            this.setAttribute('aria-expanded', isExpanded);
+        });
+    </script>
 </body>
 </html>
