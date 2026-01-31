@@ -376,3 +376,58 @@ body{
         gap: 40px;
     }
 }
+
+/* Mobile / small tablet fixes for the home landing */
+@media (max-width: 768px) {
+  .landing-container {
+    flex-direction: column;
+    align-items: flex-start;      /* left align content stack */
+    justify-content: flex-start;
+    padding: 100px 16px 32px;     /* reduce huge top padding for mobile */
+    gap: 24px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .landing-content {
+    max-width: 100%;
+    padding-right: 0;
+    min-width: 0;                 /* allow flex child to shrink and wrap text */
+  }
+
+  .landing-content h2 {
+    font-size: 28px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .landing-content p {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  .profile-image {
+    width: 160px;                 /* much smaller portrait on mobile */
+    height: 160px;
+    border-width: 4px;
+    margin: 0 0 8px 0;
+    align-self: flex-start;
+    flex-shrink: 0;
+  }
+  .profile-image img { object-fit: cover; }
+
+  /* move hamburger in a bit so it doesn't overlap important content */
+  #hamburger {
+    top: 12px;
+    left: 12px;
+  }
+
+  /* ensure long words/links break instead of overflowing */
+  .landing-content,
+  .landing-content p,
+  .landing-content ul {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+  }
+}
