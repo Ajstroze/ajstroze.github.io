@@ -365,8 +365,27 @@ body{
 /* Mobile tweaks */
 @media (max-width:540px){
   /* keep left alignment but reduce gutters on small screens */
-  .about, .about-content { margin: 1.25rem 0.75rem; padding: 0 .75rem; }
+  .about, .about-content { 
+    margin: 1.25rem 0.75rem 1.25rem 1rem; 
+    padding: 0 0.75rem; 
+  }
   .about h1 { margin-top: 0.9rem; }
+
+  /* Ensure menu doesn't cover content on small screens */
+  .menu {
+    left: -300px;   /* menu stays off-screen until toggled */
+    z-index: 999;   /* sit on top of page content */
+  }
+  .menu.open {
+    left: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Add safe padding so content doesn't go behind hamburger area */
+  .about, .about-content {
+    margin-left: 1rem;
+    padding-left: 0.5rem;
+  }
 }
 
 /* Responsive */
