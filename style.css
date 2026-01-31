@@ -193,7 +193,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px 40px 40px 40px;
+    padding: 200px 40px 40px 40px;
     gap: 80px;
     max-width: 1200px;
     margin: 0 auto;
@@ -255,6 +255,118 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* About page styles */
+:root{
+  --bg: #0b0b0b;
+  --text: #eaeaea;
+  --muted: #9aa2aa;
+  --accent: #7cc0ff;
+  --max-width: 1020px;
+  --font-sans: "Inter";
+}
+
+/* global readable defaults (won't interfere with your existing layout) */
+body{
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* About page container */
+.about, .about-content {
+  max-width: var(--max-width);
+  margin-top: 5.50rem;    
+  margin-right: 0;
+  margin-bottom: 2.25rem;
+  margin-left: 9.25rem; 
+  padding: 0 1rem 0 0;
+  line-height: 1.65;
+  font-size: 1rem;
+  text-align: left;
+  color: var(--text);
+  word-wrap: break-word;
+}
+
+/* Headings */
+.about h1,
+.about h2,
+.about h3 {
+  color: var(--text);
+  margin: 1.2rem 0 0.5rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Responsive heading sizes */
+.about h1 { font-size: clamp(1.6rem, 2.2vw + 0.6rem, 2.4rem); }
+.about h2 { font-size: clamp(1.25rem, 1.6vw + 0.6rem, 1.6rem); }
+.about h3 { font-size: clamp(1.05rem, 0.9vw + 0.6rem, 1.1rem); }
+
+/* Paragraphs and lead text */
+.about p {
+  margin: 0 0 1rem;
+  color: var(--text);
+  font-size: 1rem;
+}
+.about .lead {
+  font-size: 1.06rem;
+  color: var(--muted);
+  margin-bottom: 1.1rem;
+}
+
+/* Lists */
+.about ul,
+.about ol {
+  margin: 0 0 1rem 1.25rem;
+  padding: 0;
+  color: var(--text);
+}
+.about li { margin: 0.4rem 0; }
+
+/* Links inside about content */
+.about a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(124,192,255,0.15);
+}
+.about a:hover,
+.about a:focus {
+  text-decoration: underline;
+  border-bottom-color: transparent;
+}
+
+/* Small / muted text */
+.about .muted {
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+/* Blockquote */
+.about blockquote{
+  margin: 1rem 0;
+  padding: .6rem 1rem;
+  background: rgba(255,255,255,0.02);
+  border-left: 3px solid rgba(124,192,255,0.12);
+  color: var(--muted);
+}
+
+/* Section divider helper */
+.about .divider{
+  height:1px;
+  background: rgba(255,255,255,0.04);
+  margin: 1.6rem 0;
+}
+
+/* Mobile tweaks */
+@media (max-width:540px){
+  /* keep left alignment but reduce gutters on small screens */
+  .about, .about-content { margin: 1.25rem 0.75rem; padding: 0 .75rem; }
+  .about h1 { margin-top: 0.9rem; }
 }
 
 /* Responsive */
