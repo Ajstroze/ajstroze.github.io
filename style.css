@@ -517,4 +517,98 @@ body{
     word-break: break-word;
     white-space: normal;
   }
+
+  /* small circular avatar placed to the right of the hamburger button */
+  .top-avatar {
+    position: fixed;
+    top: 12px; /* matches mobile hamburger top */
+    left: calc(12px + 32px + 8px); /* mobile left + hamburger width + gap */
+    width: 32px;
+    height: 32px;
+    border-width: 1.5px;
+  }
+}
+
+/* Top-right search control (added) */
+.top-search{
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 250; /* above page content but below heavy overlays if needed */
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 6px 8px;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+}
+.top-search input{
+  background: transparent;
+  border: none;
+  color: var(--text);
+  outline: none;
+  width: 180px;
+  font-size: 0.95rem;
+  padding: 2px 4px;
+  font-family: var(--font-sans);
+}
+.top-search input::placeholder{ color: rgba(234,234,234,0.55); }
+.top-search button{
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px;
+}
+.top-search:focus-within{
+  box-shadow: 0 4px 18px rgba(124,192,255,0.06);
+  border-color: rgba(124,192,255,0.12);
+}
+
+/* hide on very small screens to avoid crowding (adjust breakpoint if desired) */
+@media (max-width:420px){
+  .top-search{ display: none; }
+}
+
+/* if you hide the search at very small widths, ensure avatar still visible */
+@media (max-width: 420px) {
+  .top-avatar { display: inline-block; } /* keep visible unless you want it hidden */
+}
+
+/* small circular avatar placed to the right of the hamburger button (updated size & alignment) */
+.top-avatar {
+  position: fixed;
+  /* align vertically near the hamburger; adjust if you tweak hamburger top */
+  top: 28px;
+  /* hamburger left (30px) + hamburger width (32px) + gap (8px) */
+  left: calc(40px + 32px + 8px);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.10);
+  z-index: 3;
+  display: inline-block;
+  background: rgba(255,255,255,0.02);
+  box-sizing: border-box;
+}
+.top-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* align with mobile adjusted hamburger position (hamburger top/left changed to 12px in mobile rules) */
+@media (max-width: 768px) {
+  .top-avatar {
+    top: 12px; /* matches mobile hamburger top */
+    left: calc(12px + 32px + 8px); /* mobile left + hamburger width + gap */
+    width: 28px;
+    height: 28px;
+    border-width: 1.5px;
+  }
 }
