@@ -1,0 +1,35 @@
+/* Mobile / responsive rules */
+
+@media (max-width: 1024px) {
+  .landing-container { flex-direction: column; gap:40px; }
+}
+
+/* small phones */
+@media (max-width: 768px) {
+  .landing-container {
+    flex-direction: column; align-items:flex-start; justify-content:flex-start;
+    padding: 100px 16px 32px; gap:24px; max-width:100%; margin:0 auto;
+  }
+  .landing-content { max-width:100%; padding-right:0; min-width:0; }
+  .landing-content h2{ font-size:28px; margin-bottom:16px; }
+  .landing-content p{ font-size:16px; margin-bottom:18px; }
+  .profile-image { width:160px; height:160px; border-width:4px; margin:0 0 8px 0; align-self:flex-start; flex-shrink:0; }
+  .profile-image img{ object-fit:cover; }
+
+  /* move hamburger in a bit so it doesn't overlap important content */
+  #hamburger { top:12px; left:12px; }
+  /* adjust avatar to match */
+  .top-avatar { top:12px; left: calc(12px + 32px + 8px); width:28px; height:28px; border-width:1.5px; }
+
+  /* content safe area for pages */
+  .about, .about-content, .reading, .reading-content { margin:1.25rem 0.75rem 1.25rem 1rem; padding:0 .75rem; }
+  .about h1, .reading h1 { margin-top:0.9rem; }
+
+  /* menu overlay z-order */
+  .menu { z-index: 700; }
+}
+
+/* hide search on very small screens */
+@media (max-width:420px){
+  .top-search { display:none; }
+}

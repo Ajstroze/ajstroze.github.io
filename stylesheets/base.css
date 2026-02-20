@@ -1,0 +1,53 @@
+:root{
+  --bg: #0b0b0b;
+  --text: #eaeaea;
+  --muted: #9aa2aa;
+  --accent: #7cc0ff;
+  --max-width: 1020px;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+html,body{height:100%}
+body{
+  font-family: var(--font-sans);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  margin:0;
+}
+
+.page-background {
+  min-height: 100vh;
+  position: relative;
+  background-color: #0f172a;
+  overflow: hidden;
+  /* create space for the fixed top-right search/hamburger */
+  box-sizing: border-box;
+}
+
+.page-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: #0f172a;
+  background-image:
+    linear-gradient(to right, rgba(148,163,184,0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148,163,184,0.2) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.page-background > * { position: relative; z-index: 1; }
+
+.title{
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+/* small utility */
+.hidden { display:none !important; }
