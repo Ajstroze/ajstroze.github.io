@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="stylesheets/nav.css">
     <link rel="stylesheet" href="stylesheets/pages.css">
     <link rel="stylesheet" href="stylesheets/responsive.css">
-    <link rel="stylesheet" href="stylesheets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -19,11 +18,6 @@
             <span></span>
         </button>
 
-        <!-- small circular avatar to the right of hamburger (links to about) -->
-        <a class="top-avatar" href="about.html" aria-label="View profile">
-            <img src="pfp.jpg" alt="Profile">
-        </a>
-
         <!-- Navigation Menu -->
         <nav id="menu" class="menu">
             <ul>
@@ -33,18 +27,165 @@
                 <li><a href="reading.html">Articles I'm reading</a></li>
             </ul>
         </nav>
+
         <!-- Content -->
         <main class="reading">
             <div class="reading-content">
-                <h1>Articles I'm reading</h1>
-                <p>Here are some of the articles I'm currently reading or have found interesting recently.</p>
-                <h2>Security</h2>
-                <h2>Detection Engineering</h2>
-                <h2>AI & Machine Learning</h2>
-                <h2>Cloud Security</h2>
-                <h2>Other</h2>
-            </div>
+                <h1>Articles & Resources I'm Reading</h1>
+                <p class="lead">A curated collection of interesting articles, research papers, and GitHub repositories that have shaped my thinking about security and technology.</p>
 
+                <!-- Security Section -->
+                <section class="reading-category">
+                    <h2>Security</h2>
+                    <div class="resource-grid">
+                        <article class="resource-card">
+                            <div class="resource-header">
+                                <h3 class="resource-title">Article or Resource Title</h3>
+                                <span class="resource-source">Source/Publication</span>
+                            </div>
+                            <p class="resource-excerpt">Brief commentary or notes about why this resource is interesting and what you learned from it.</p>
+                            <div class="resource-footer">
+                                <span class="resource-tag">Tag</span>
+                                <a href="#" class="resource-link" target="_blank" rel="noopener">Read →</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card">
+                            <div class="resource-header">
+                                <h3 class="resource-title">Article or Resource Title</h3>
+                                <span class="resource-source">Source/Publication</span>
+                            </div>
+                            <p class="resource-excerpt">Brief commentary or notes about why this resource is interesting and what you learned from it.</p>
+                            <div class="resource-footer">
+                                <span class="resource-tag">Tag</span>
+                                <a href="#" class="resource-link" target="_blank" rel="noopener">Read →</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Detection Engineering Section -->
+                <section class="reading-category">
+                    <h2>Detection Engineering</h2>
+                    <div class="resource-grid">
+                        <article class="resource-card">
+                            <div class="resource-header">
+                                <h3 class="resource-title">Detection Engineering Weekly</h3>
+                                <span class="resource-source">Blog</span>
+                            </div>
+                            <p class="resource-excerpt">Great blog for new and seasoned detection engineers. Start with the detection engineers field manual.</p>
+                            <div class="resource-footer">
+                                <span class="resource-tag">Substack</span>
+                                <a href="https://www.detectionengineering.net/" class="resource-link" target="_blank" rel="noopener">Read →</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card">
+                            <div class="resource-header">
+                                <h3 class="resource-title">Kubernetes Detection Engineering</h3>
+                                <span class="resource-source">Blog</span>
+                            </div>
+                            <p class="resource-excerpt">Great resource for understanding detection engineering in Kubernetes environments.</p>
+                            <div class="resource-footer">
+                                <span class="resource-tag">Blog</span>
+                                <a href="https://brandontlyons.substack.com/p/practical-detection-engineering-for" class="resource-link" target="_blank" rel="noopener">Read →</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- AI & Machine Learning Section -->
+                <section class="reading-category">
+                    <h2>AI & Machine Learning</h2>
+                    <div class="resource-grid">
+                        <article class="resource-card">
+                            <div class="resource-header">
+                                <h3 class="resource-title">Article or Resource Title</h3>
+                                <span class="resource-source">Source/Publication</span>
+                            </div>
+                            <p class="resource-excerpt">Brief commentary or notes about why this resource is interesting and what you learned from it.</p>
+                            <div class="resource-footer">
+                                <span class="resource-tag">Tag</span>
+                                <a href="#" class="resource-link" target="_blank" rel="noopener">Read →</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card">
+                            <div class="resource-header">
+                                <h3 class="resource-title">Article or Resource Title</h3>
+                                <span class="resource-source">Source/Publication</span>
+                            </div>
+                            <p class="resource-excerpt">Brief commentary or notes about why this resource is interesting and what you learned from it.</p>
+                            <div class="resource-footer">
+                                <span class="resource-tag">Tag</span>
+                                <a href="#" class="resource-link" target="_blank" rel="noopener">Read →</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Cloud Security Section -->
+                <section class="reading-category">
+                    <h2>Cloud Security</h2>
+                    <div class="resource-grid">
+                        <article class="resource-card">
+                            <div class="resource-header">
+                                <h3 class="resource-title">Article or Resource Title</h3>
+                                <span class="resource-source">Source/Publication</span>
+                            </div>
+                            <p class="resource-excerpt">Brief commentary or notes about why this resource is interesting and what you learned from it.</p>
+                            <div class="resource-footer">
+                                <span class="resource-tag">Tag</span>
+                                <a href="#" class="resource-link" target="_blank" rel="noopener">Read →</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card">
+                            <div class="resource-header">
+                                <h3 class="resource-title">Article or Resource Title</h3>
+                                <span class="resource-source">Source/Publication</span>
+                            </div>
+                            <p class="resource-excerpt">Brief commentary or notes about why this resource is interesting and what you learned from it.</p>
+                            <div class="resource-footer">
+                                <span class="resource-tag">Tag</span>
+                                <a href="#" class="resource-link" target="_blank" rel="noopener">Read →</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Other Resources Section -->
+                <section class="reading-category">
+                    <h2>Other Resources</h2>
+                    <div class="resource-grid">
+                        <article class="resource-card">
+                            <div class="resource-header">
+                                <h3 class="resource-title">Article or Resource Title</h3>
+                                <span class="resource-source">Source/Publication</span>
+                            </div>
+                            <p class="resource-excerpt">Brief commentary or notes about why this resource is interesting and what you learned from it.</p>
+                            <div class="resource-footer">
+                                <span class="resource-tag">Tag</span>
+                                <a href="#" class="resource-link" target="_blank" rel="noopener">Read →</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card">
+                            <div class="resource-header">
+                                <h3 class="resource-title">Article or Resource Title</h3>
+                                <span class="resource-source">Source/Publication</span>
+                            </div>
+                            <p class="resource-excerpt">Brief commentary or notes about why this resource is interesting and what you learned from it.</p>
+                            <div class="resource-footer">
+                                <span class="resource-tag">Tag</span>
+                                <a href="#" class="resource-link" target="_blank" rel="noopener">Read →</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </main>
+         
     <!-- Menu Toggle Script -->
     <script>
         const hamburger = document.getElementById('hamburger');
@@ -55,6 +196,11 @@
             menu.classList.toggle('open');
             
             const isExpanded = this.classList.contains('active');
+            this.setAttribute('aria-expanded', isExpanded);
+        });
+    </script>
+</body>
+</html>
             this.setAttribute('aria-expanded', isExpanded);
         });
     </script>
