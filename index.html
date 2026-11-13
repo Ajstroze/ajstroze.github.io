@@ -1,132 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="stylesheets/base.css">
-    <link rel="stylesheet" href="stylesheets/nav.css">
-    <link rel="stylesheet" href="stylesheets/landing.css">
-    <link rel="stylesheet" href="stylesheets/responsive.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Andrew Strozewski</title>
+    <meta name="description" content="Andrew Strozewski — security engineer working on threat detection, cloud security, and incident response.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/site.css">
 </head>
 <body>
-    <div class="page-background">
-        <!-- Hamburger Menu Button -->
-        <button id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-        <!-- Navigation Menu -->
-        <nav id="menu" class="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="reading.html">Reading</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="topbar">
+        <div class="wrap topbar-inner">
+            <a class="brand" href="index.html">Andrew Strozewski</a>
+            <nav class="nav" aria-label="Main">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+        </div>
+    </header>
 
-        <!-- Hero Section -->
+    <main id="main">
         <section class="hero">
-            <div class="hero-content">
-                <h1>Security Engineer</h1>
-                <p class="hero-subtitle">Building secure systems and detecting threats.</p>
-                <p class="hero-description">I'm Andrew Strozewski — focused on threat detection, secure cloud architecture, and incident response.</p>
-                <div class="hero-cta">
-                    <a href="about.html" class="btn btn-primary">Learn More</a>
-                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+            <div class="wrap hero-inner">
+                <span class="eyebrow">Security Engineer · Raleigh, NC</span>
+
+                <h1>Hi, I'm <span class="accent">Andy</span></h1>
+
+                <!-- ====================================================== -->
+                <!--  EDIT ME: this is your description. Replace the two    -->
+                <!--  paragraphs below with whatever you want to say.       -->
+                <!--  Add or remove <p class="hero-text"> blocks freely.    -->
+                <!-- ====================================================== -->
+                <p class="hero-text">
+                    I'm a security engineer focused on threat detection, secure cloud
+                    architecture, and incident response. I spend most of my time building
+                    systems that catch the things other systems miss.
+                </p>
+                <p class="hero-text">
+                    I studied computer science at Earlham College and information security
+                    at Carnegie Mellon, and I'm now at LexisNexis leading projects that
+                    shape how the organization detects and responds to threats. I'm a
+                    curious, hands-on learner who likes being in over my head.
+                </p>
+                <!-- ====================== END EDIT ME ==================== -->
+
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="projects.html">View Projects</a>
+                    <a class="btn btn-secondary" href="blog.html">Read the Blog</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="pfp.jpg" alt="Andrew Strozewski">
-            </div>
         </section>
+    </main>
 
-        <!-- Featured Work Section -->
-        <section class="featured-section">
-            <div class="section-header">
-                <h2>Featured Work</h2>
-                <p class="section-subtitle">Selected projects and contributions</p>
+    <footer class="sitefoot">
+        <div class="wrap sitefoot-inner">
+            <div class="foot-links">
+                <a href="https://github.com/ajstroze" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.42 7.42 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/andrew-strozewski" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3.58 1.5a1.58 1.58 0 1 0 0 3.16 1.58 1.58 0 0 0 0-3.16ZM2.2 5.85h2.77V14.5H2.2V5.85Zm4.5 0h2.65v1.18h.04c.37-.7 1.27-1.44 2.61-1.44 2.79 0 3.3 1.84 3.3 4.23v4.68h-2.76v-4.15c0-.99-.02-2.26-1.38-2.26-1.38 0-1.59 1.08-1.59 2.19v4.22H6.7V5.85Z"/></svg>
+                    <span>LinkedIn</span>
+                </a>
+                <!-- EDIT ME: swap in your real address (both places). -->
+                <a href="mailto:ajstroze@email.com">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="1.5" y="3.2" width="13" height="9.6" rx="1.6"/><path d="m1.9 4.3 5.3 4a1.3 1.3 0 0 0 1.6 0l5.3-4"/></svg>
+                    <span>ajstroze@email.com</span>
+                </a>
             </div>
-            <div class="featured-grid">
-                <article class="featured-card">
-                    <div class="card-header">
-                        <h3>Project Title</h3>
-                        <span class="card-tag">Security</span>
-                    </div>
-                    <p class="card-description">Brief description of the project or work goes here. This is where you'll highlight key contributions and impact.</p>
-                    <a href="#" class="card-link">View Details →</a>
-                </article>
+            <p class="copyright">© <span id="year">2026</span> Andrew Strozewski</p>
+        </div>
+    </footer>
 
-                <article class="featured-card">
-                    <div class="card-header">
-                        <h3>Project Title</h3>
-                        <span class="card-tag">Detection</span>
-                    </div>
-                    <p class="card-description">Brief description of the project or work goes here. This is where you'll highlight key contributions and impact.</p>
-                    <a href="#" class="card-link">View Details →</a>
-                </article>
-
-                <article class="featured-card">
-                    <div class="card-header">
-                        <h3>Project Title</h3>
-                        <span class="card-tag">Cloud</span>
-                    </div>
-                    <p class="card-description">Brief description of the project or work goes here. This is where you'll highlight key contributions and impact.</p>
-                    <a href="#" class="card-link">View Details →</a>
-                </article>
-            </div>
-        </section>
-
-        <!-- Recent Articles Section -->
-        <section class="recent-section">
-            <div class="section-header">
-                <h2>Recent Articles</h2>
-                <p class="section-subtitle">Latest thoughts and insights</p>
-            </div>
-            <div class="article-list">
-                <article class="article-item">
-                    <time class="article-date">Date</time>
-                    <h3 class="article-title">Article Title Goes Here</h3>
-                    <p class="article-excerpt">Brief excerpt or summary of the article content will appear here.</p>
-                    <a href="#" class="article-link">Read More →</a>
-                </article>
-
-                <article class="article-item">
-                    <time class="article-date">Date</time>
-                    <h3 class="article-title">Article Title Goes Here</h3>
-                    <p class="article-excerpt">Brief excerpt or summary of the article content will appear here.</p>
-                    <a href="#" class="article-link">Read More →</a>
-                </article>
-
-                <article class="article-item">
-                    <time class="article-date">Date</time>
-                    <h3 class="article-title">Article Title Goes Here</h3>
-                    <p class="article-excerpt">Brief excerpt or summary of the article content will appear here.</p>
-                    <a href="#" class="article-link">Read More →</a>
-                </article>
-            </div>
-            <div class="section-footer">
-                <a href="blog.html" class="btn btn-outline">View All Articles</a>
-            </div>
-        </section>
-    </div>
-
-    <!-- Menu Toggle Script -->
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const menu = document.getElementById('menu');
-
-        hamburger.addEventListener('click', function() {
-            this.classList.toggle('active');
-            menu.classList.toggle('open');
-            
-            const isExpanded = this.classList.contains('active');
-            this.setAttribute('aria-expanded', isExpanded);
-        });
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
